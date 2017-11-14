@@ -79,8 +79,7 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
-    //instantiate the player's character
-    pat = new Protagonist( name );
+    //instantiate the player's charact
 
      s = "What path shall thy follow on your quest?";
     System.out.print( s );
@@ -94,11 +93,11 @@ public class YoRPG
     catch ( IOException e ) { }
     
     if (classy = "Assassain")
-      Assassain()
+      pat = new Assassain(name)
     else if (classy = "Mage")
-      Mage()
+      pat = new Mage(name)
     else if (classy = "Warrior")
-      Warrior()
+      pat = new Warrior(name)
     else
       "You have not chosen and shall't be draft'd to be a warrior"
       
