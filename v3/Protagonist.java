@@ -1,58 +1,80 @@
 //Team CSGO -- Maryann Foley, Wenting Li, Stefan Tan
 //APCS1 pd8
-//HW#30 -- Ye Olde Role Playing Game, Improved
-//2017-11-10
+//HW#31 -- Ye Olde Role Playing Game, Expanded
+//2017-11-13
 
-public class Protagonist extends Character {
-    
+public class Protagonist extends Character
+{
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-    private String name;
-    private int HP;
-    private int strength;
-    private int defense;
-    private double attkRating;
+    private String _name = "J. Doe";
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    // ~~~~~~~~~~ CONSTRUCTOR ~~~~~~~~~~~
-    public Protagonist(String newName) { //assigns attribute with default values
-	name = newName;                  //and a given name
-	HP = 125;
-	strength = 100;
-	defense = 40;
-	attkRating = 0.4;
+
+    /*=============================================
+      default constructor
+      pre:  instance vars are declared
+      post: initializes instance vars.
+      =============================================*/
+    public Protagonist()
+    {
+	_hitPts = 125;
+	_strength = 100;
+	_defense = 40;
+	_attack = .4;
     }
 
-    // ~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~~~~~
-    public boolean isAlive(){ //returns boolean indicating living or dead
-	return HP > 0;
+
+    /*=============================================
+      overloaded constructor
+      pre:  instance vars are declared
+      post: initializes instance vars. _name is set to input String.
+      =============================================*/
+    public Protagonist( String name ) {
+	this();
+	_name = name;
     }
 
-    public int getDefense(){ //returns value of defense attribute
-	return defense;
-    }
 
-    public String getName(){ //returns value of name attribute
-	return name;
-    }
+    // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
+    public String getName() { return _name; }
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    public void lowerHP(int dmg){ //takes an int parameter, decreases HP by int
-	HP -= dmg;
-    }
 
-    public int attack(Monster x){ //attacks, returns damage inflicted on Monster
-	int damage = ((int)(strength * attkRating)) - x.getDefense();
-	x.lowerHP(damage);
+    /*=============================================
+      int attack(Monster) -- simulates attack on instance of class Monster
+      pre:  Input not null
+      post: Calculates damage to be inflicted, flooring at 0. 
+      Calls opponent's lowerHP() method to inflict damage. 
+      Returns damage dealt.
+      =============================================*/
+    public int attack( Monster opponent )
+    {
+
+	int damage = (int)( (_strength * _attack) - opponent.getDefense() );
+	//System.out.println( "\t\t**DIAG** damage: " + damage );
+
+	if ( damage < 0 )
+	    damage = 0;
+
+	opponent.lowerHP( damage );
+
 	return damage;
+    }//end attack
+
+
+    //prepare a Protagonist for a special attack
+    public void specialize()
+    {
+	_attack = .75;
+	_defense = 20;
     }
 
-    public void specialize(){ //prepare to perform special attack
-	defense -= 5;
-	attkRating += 0.2;
+
+    //revert to normal mode
+    public void normalize()
+    {
+	_attack = .4;
+	_defense = 40;
     }
 
-    public void normalize(){ //prepare to perform normal attack
-	defense = 40;
-	attkRating = 0.4;
-    }
-}// end class Protagonist
-	
-	
+}//end class Protagonist

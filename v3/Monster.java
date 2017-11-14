@@ -1,43 +1,48 @@
 //Team CSGO -- Maryann Foley, Wenting Li, Stefan Tan
 //APCS1 pd8
-//HW#30 -- Ye Olde Role Playing Game, Improved
-//2017-11-10
+//HW#31 -- Ye Olde Role Playing Game, Expanded
+//2017-11-13
 
-public class Monster extends Character {
-    
+public class Monster extends Character
+{
+
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-    private int HP;
-    private int strength;
-    private int defense;
-    private double attkRating;
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    // ~~~~~~~~~~ CONSTRUCTOR ~~~~~~~~~~~
-    // assigns default values to attributes with strength being a random int
-    // from the range [20,65)
-    public Monster() {
-	HP = 150;
-	strength = (int) ((Math.random() * 45) + 20);
-	defense = 20;
-	attkRating = 1;
+
+    /*=============================================
+      default constructor
+      pre:  instance vars are declared
+      post: initializes instance vars.
+      =============================================*/
+    public Monster()
+    {
+	_hitPts = 150;
+	_strength = 20 + (int)( Math.random() * 45 ); // [20,65)
+	_defense = 20;
+	_attack = 1;
     }
 
-    // ~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~~~~~
-    public boolean isAlive(){ //returns boolean indicating living or dead
-	return HP > 0;
-    }
 
-    public int getDefense(){ //returns value of defense attribute
-	return defense;
-    }
+    /*=============================================
+      int attack(Protagonist) -- simulates attack on a Protagonist
+      pre:  Input not null
+      post: Calculates damage to be inflicted, flooring at 0. 
+      Calls opponent's lowerHP() method to inflict damage. 
+      Returns damage dealt.
+      =============================================*/
+    public int attack( Protagonist opponent )
+    {
+	int damage = (int)( (_strength * _attack) - opponent.getDefense() );
+	//System.out.println( "\t\t**DIAG** damage: " + damage );
 
-    public void lowerHP(int dmg){ //takes an int parameter, decreases HP by int
-	HP -= dmg;
-    }
+	if ( damage < 0 )
+	    damage = 0;
 
-    //attacks, returns damage inflicted on Protagonist
-    public int attack(Protagonist x){
-	int damage = ((int)(strength * attkRating)) - x.getDefense();
-	x.lowerHP(damage);
+	opponent.lowerHP( damage );
+
 	return damage;
-    }
-}
+    }//end attack
+
+
+}//end class Monster
