@@ -5,4 +5,5 @@
 * The Sentinel make seem like a peaceful creature, however if provoked it could be one of the most dangerous monster out there.
 They have very strong defenses.
 
-*A gathering of only the bravest of all fighters, the WARRIOR class harbors increased HP, strength, and defense stats and excels at close-range combat.
+* A gathering of only the bravest of all fighters, the WARRIOR class harbors increased HP, strength, and defense stats and excels at close-range combat.
+* Amongst those gifted with the powers of nature, a group has risen with courage to challenge monsters. The MAGE class is blessed with higher strength and attack and excels at ranged attacks.
