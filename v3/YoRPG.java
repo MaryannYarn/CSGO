@@ -79,8 +79,29 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
-    //instantiate the player's character
-    pat = new Protagonist( name );
+    //instantiate the player's charact
+
+     s = "What path shall thy follow on your quest?";
+    System.out.print( s );
+     s = "Thou must choose one of the following: Assassain, Mage, or Warrior";
+    System.out.println( s );
+    
+
+    try {
+      classy = in.readLine();
+    }
+    catch ( IOException e ) { }
+    
+    if (classy = "Assassain")
+      pat = new Assassain(name)
+    else if (classy = "Mage")
+      pat = new Mage(name)
+    else if (classy = "Warrior")
+      pat = new Warrior(name)
+    else
+      "You have not chosen and shall't be draft'd to be a warrior"
+      
+
 
   }//end newGame()
 
@@ -178,4 +199,3 @@ public class YoRPG
   }//end main
 
 }//end class YoRPG
-
