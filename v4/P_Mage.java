@@ -3,7 +3,7 @@
 //HW#31 -- Ye Olde Role Playing Game, Expanded
 //2017-11-13
 
-public class Mage extends Protagonist
+public class P_Mage extends Protagonist
 {	  
 	/*=============================================
 	  default constructor

@@ -3,7 +3,7 @@
 //HW#31 -- Ye Olde Role Playing Game, Expanded
 //2017-11-13
 
-public class Warrior extends Protagonist
+public class P_Warrior extends Protagonist
 {	  
 	/*=============================================
 	  default constructor
