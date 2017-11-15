@@ -65,23 +65,15 @@ public abstract class Protagonist extends Character
     //prepare a Protagonist for a special attack
     public abstract void specialize();
 
-    /* public void specialize()
-    {
-	_attack = .75;
-	_defense = 20;
-	}*/
 
 
     //revert to normal mode
     public abstract void normalize();
 
-    /*public void normalize()
-    {
-	_attack = .4;
-	_defense = 40;
-	}*/
 
-    //returns a String description of Protagonist
+    
+    //calls a String description of a Protagonist subclass
+
     public abstract String about();
 
 }//end class Protagonist
