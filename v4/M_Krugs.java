@@ -3,7 +3,7 @@
 //HW#31 -- Ye Olde Role Playing Game, Expanded
 //2017-11-13
 
-public class Krugs extends Monster {
+public class M_Krugs extends Monster {
     
     /*=============================================
       default constructor
