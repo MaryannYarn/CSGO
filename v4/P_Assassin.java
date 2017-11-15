@@ -44,4 +44,4 @@ public class P_Assassin extends Protagonist
 	return str;
     }
 	
-}//end class Assassin
+}//end class P_Assassin
