@@ -1,9 +1,9 @@
 //Team CSGO -- Maryann Foley, Wenting Li, Stefan Tan
 //APCS1 pd8
-//HW#31 -- Ye Olde Role Playing Game, Expanded
-//2017-11-13
+//HW#32 -- Ye Olde Role Playing Game, Expanded
+//2017-11-14
 
-public class Protagonist extends Character
+public abstract class Protagonist extends Character
 {
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     private String _name = "J. Doe";
@@ -63,18 +63,13 @@ public class Protagonist extends Character
 
 
     //prepare a Protagonist for a special attack
-    public void specialize()
-    {
-	_attack = .75;
-	_defense = 20;
-    }
+    public abstract void specialize();
 
 
     //revert to normal mode
-    public void normalize()
-    {
-	_attack = .4;
-	_defense = 40;
-    }
+    public abstract void normalize();
+
+    //calls a String description of a Protagonist subclass
+    public abstract String about();
 
 }//end class Protagonist
