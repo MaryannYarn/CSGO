@@ -82,10 +82,13 @@ public class YoRPG
 
 	//instantiate the player's charact
 
-	s = "What path shall thy follow on your quest?";
+	s = "What path shall thy follow on thy quest?";
+	s += " Thou must choose thy belonging: \n";
+	s += "\t1: Assassin\n";
+	s += "\t2: Mage\n";
+	s += "\t3: Warrior\n";
+	s += "Selection: ";
 	System.out.print( s );
-	s = "Thou must choose one of the following: Assassin, Mage, or Warrior";
-	System.out.println( s );
     
 
 	try {
@@ -93,11 +96,11 @@ public class YoRPG
 	}
 	catch ( IOException e ) { }
     
-	if (classy.equals("Assassin"))
+	if ( 1 == Integer.parseInt( classy ) )
 	    pat = new P_Assassin();
-	else if (classy.equals("Mage"))
+	else if ( 2 == Integer.parseInt( classy ) )
 	    pat = new P_Mage();
-	else if (classy.equals("Warrior"))
+	else if ( 3 == Integer.parseInt( classy ) )
 	    pat = new P_Warrior();
 	else
 	    s = "You have not chosen and shall't be draft'd to be a warrior";
