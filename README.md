@@ -1,4 +1,4 @@
-Team CSGO: Wenting Li, Maryann Foley, Stefan Tan
+Team CSGO -- Wenting Li, Maryann Foley, Stefan Tan
 # YoRPG_CSGO
 ## Monster Classes
 * The Krugs may just look moving rocks, but in fact they are very dangerous. They have a lot of hitpoints.
