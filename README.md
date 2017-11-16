@@ -1,8 +1,9 @@
 Team CSGO -- Wenting Li, Maryann Foley, Stefan Tan
 # YoRPG_CSGO
+
 ## Monster Classes
-* The Krugs may just look a pair of moving rocks, but in fact they are very dangerous. They have a lot of hitpoints.
-* The Gromp make look like a frog to you, but it actually packs a dangerous punch. Thankfully it is very fragile.
+* The KRUGS may just look a pair of moving rocks, but in fact they are very dangerous. They have a lot of hitpoints.
+* The GROMP make look like a frog to you, but it actually packs a dangerous punch. Thankfully it is very fragile.
 * The Sentinel make seem like a peaceful creature, however if provoked it could be one of the most dangerous monster out there.
 They have very strong defenses.
 
@@ -19,4 +20,9 @@ They have very strong defenses.
 * Heal written as a method of protagonist
 
 ## How to play
-
+* Game initiated. Choose your difficulty with the inputs 1, 2, 3.
+* When prompted, enter your name.
+* Choose your class with the inputs 1, 2, 3.
+* Choose to drink a potion and restore a bit of HP with inputs 1, 2.
+* Choose to engage in battle with a monster with inputs 1, 2.
+* Fare well on your journey, hero!
