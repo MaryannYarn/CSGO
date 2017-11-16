@@ -9,6 +9,7 @@ They have very strong defenses.
 ## pROTAGONIST Classes
 * A gathering of only the bravest of all fighters, the WARRIOR class harbors increased HP, strength, and defense stats and excels at close-range combat.
 * Amongst those gifted with the powers of nature, a group has risen with courage to challenge monsters. The MAGE class is blessed with higher strength and attack and excels at ranged attacks.
+* Denizens of nightfall, the ASSASSIN class harbors increased strength and attack stats, excelling at stealth attacks and close-range combat.
 
 ## Added features
 * You can now heal your protagonist!
