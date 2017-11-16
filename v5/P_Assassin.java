@@ -1,7 +1,7 @@
 //Team CSGO -- Maryann Foley, Wenting Li, Stefan Tan
 //APCS1 pd8
-//HW#32 -- Ye Olde Role Playing Game, Unchained
-//2017-11-14
+//HW#32 -- Ye Olde Role Playing Game, Realized
+//2017-11-15
 
 public class P_Assassin extends Protagonist
 {	  
@@ -11,7 +11,7 @@ public class P_Assassin extends Protagonist
       pre:  instance vars are declared
       post: initializes instance vars.
       =============================================*/
-    public Assassin()
+    public P_Assassin()
     {
 	super();
 	_hitPts = 135; //base:125

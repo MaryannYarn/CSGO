@@ -1,7 +1,7 @@
 //Team CSGO -- Maryann Foley, Wenting Li, Stefan Tan
 //APCS1 pd8
-//HW#32 -- Ye Olde Role Playing Game, Unchained
-//2017-11-14
+//HW#32 -- Ye Olde Role Playing Game, Realized
+//2017-11-15
 
 public class P_Mage extends Protagonist
 {	  
@@ -10,7 +10,7 @@ public class P_Mage extends Protagonist
       pre:  instance vars are declared
       post: initializes instance vars.
       =============================================*/
-    public Mage()
+    public P_Mage()
     {
 	super();
 	_hitPts = 90; //base:125
@@ -37,7 +37,7 @@ public class P_Mage extends Protagonist
     /*=============================================
       about(): returns a description of the Mage class
       =============================================*/
-    public static String about()
+    public String about()
     {
 	String str = "Amongst those gifted with the powers of nature, a group has risen with courage to challenge monsters. The MAGE class is blessed with higher strength and attack and excels at ranged attacks." ;
 	return str;

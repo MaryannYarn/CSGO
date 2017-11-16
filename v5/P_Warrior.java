@@ -1,7 +1,7 @@
 //Team CSGO -- Maryann Foley, Wenting Li, Stefan Tan
 //APCS1 pd8
-//HW#32 -- Ye Olde Role Playing Game, Unchained
-//2017-11-14
+//HW#32 -- Ye Olde Role Playing Game, Realized
+//2017-11-15
 
 public class P_Warrior extends Protagonist
 {	  
@@ -10,7 +10,7 @@ public class P_Warrior extends Protagonist
       pre:  instance vars are declared
       post: initializes instance vars.
       =============================================*/
-    public Warrior()
+    public P_Warrior()
     {
 	super();
 	_hitPts = 170; //base:125
@@ -37,7 +37,7 @@ public class P_Warrior extends Protagonist
     /*=============================================
       about(): returns a description of the Warrior class
       =============================================*/
-    public static String about()
+    public String about()
     {
 	String str = "A gathering of only the bravest of all fighters, the WARRIOR class harbors increased HP, strength, and defense stats and excels at close-range combat. ";
 	return str;

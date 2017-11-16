@@ -1,7 +1,7 @@
 //Team CSGO -- Maryann Foley, Wenting Li, Stefan Tan
 //APCS1 pd8
-//HW#32 -- Ye Olde Role Playing Game, Unchained
-//2017-11-14
+//HW#33 -- Ye Olde Role Playing Game, Realized
+//2017-11-15
 
 public abstract class Protagonist extends Character
 {
@@ -37,8 +37,18 @@ public abstract class Protagonist extends Character
 
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public String getName() { return _name; }
+    public int getHP() { return _hitPts; }
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+    
+     /*=============================================
+      void heal() -- heals the Protagonist. 
+      pre:  None.
+      post: Calculates hitpoints to be healed, from 10 to 20. 
+      =============================================*/
+    public void heal()
+    {
+	_hitPts += (int)(Math.random() * 10 + 10);
+    }
 
     /*=============================================
       int attack(Monster) -- simulates attack on instance of class Monster
